@@ -9,7 +9,7 @@ What vim scripts I use are list in .vimrc with `Bundle` command.
  <c-n> - snap open
 ## blackboard
 ## NERDTree
- <F7> - open/close NERDTree
+ <F8> - open/close NERDTree
 ## Other key binding
  <M-UP>, <M-DOWN>, <M-LEFT>, <M-RIGHT> - switch buffer
  <F3> - search content on the directory

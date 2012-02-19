@@ -81,11 +81,11 @@ nmap <M-Down> <c-w>j
 nmap <M-Right> <c-w>l
 nmap <M-Left> <c-w>h
 
-" 把 F7 映射到 启动NERDTree插件  
+" 把 F8 映射到 启动NERDTree插件  
 " NERDTree plugin
 " let NERDTreeWinPos = "right" "where NERD tree window is placed on the screen
 " let NERDTreeWinSize = 31 "size of the NERD tree
-nmap <F7> <ESC>:NERDTreeToggle<RETURN>
+nmap <F8> <ESC>:NERDTreeToggle<RETURN>
 " map <F8> :NERDTree<CR>
 
 " 把 CTRL-n 映射为 快速打开 
