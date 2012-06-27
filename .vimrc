@@ -14,7 +14,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 
 Bundle 'Align'
-Bundle 'tpope/vim-rails'
+" Bundle 'tpope/vim-rails'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'kchmck/vim-coffee-script'
@@ -48,7 +48,7 @@ set grepprg=grep
 function MyGrepOnDir()
 	let str = input('查询内容:')
 	let suffix = input('文件类型:')
-	exe 'gr! --include=*.{'.suffix.'} -nR '.str.' .'
+	exe 'gr! --include=*.{'.suffix.'} -nR "'.str.'" .'
 	exe 'cw'
 endfunction
 nnoremap <silent> <F3> :call MyGrepOnDir()<CR>
@@ -81,13 +81,29 @@ nmap <M-Down> <c-w>j
 nmap <M-Right> <c-w>l
 nmap <M-Left> <c-w>h
 
-" 把 F8 映射到 启动NERDTree插件  
+" 使用 F7 启动NERDTree插件  
 " NERDTree plugin
 " let NERDTreeWinPos = "right" "where NERD tree window is placed on the screen
 " let NERDTreeWinSize = 31 "size of the NERD tree
-nmap <F8> <ESC>:NERDTreeToggle<RETURN>
+nmap <F7> <ESC>:NERDTreeToggle<RETURN>
 " map <F8> :NERDTree<CR>
 
 " 把 CTRL-n 映射为 快速打开 
 map <C-n> :CommandT<CR>
+" 把 F4 映射为关闭当前tab
+map <silent> <F4> :tabclose<CR>
 
+" buffer窗口调整
+map <C-w><C-k> :resize+1<CR>
+map <C-w><C-i> :resize-1<CR>
+map <C-w><C-j> :vertical resize-1<CR>
+map <C-w><C-l> :vertical resize+1<CR>
+
+" 使用 Ctrl+S 保存文件
+map <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>i
+
+" ctags 设置
+set tags=./tags,tags
+set tags+=/home/john/.rvm/src/ruby-1.9.3-p194/tags"
+set tags+=/home/john/.rvm/gems/ruby-1.9.3-p194/gems/tags"
